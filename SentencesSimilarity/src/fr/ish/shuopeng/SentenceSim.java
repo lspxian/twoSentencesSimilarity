@@ -92,6 +92,7 @@ public class SentenceSim {
 		System.out.print("\n");
 		System.out.println("similarity : "+ sen1+" & " + sen2);
 		System.out.println("sum : "+sum);
+		System.out.println("sim value : "+sum/(m+n-2));		
 		//System.out.println("produit : "+produit);
 		return sum/(m+n-2);
 		
