@@ -3,7 +3,7 @@ A plane is taking off.	An air plane is taking off.
 A young child is riding a horse.	A child is riding a horse.
 A man is feeding a mouse to a snake.	The man is feeding a mouse to the snake.
 A man is playing a large flute.	A man is playing a flute.
-A man is spreading shreded cheese on a pizza.	A man is spreading shredded cheese on an uncooked pizza.
+A man is spreading shredded cheese on a pizza.	A man is spreading shredded cheese on an uncooked pizza.
 Three men are playing chess.	Two men are playing chess.
 A woman is playing the guitar.	A man is playing guitar.
 A woman is playing the flute.	A man is playing a flute.
@@ -110,7 +110,7 @@ A tiger cub is making a sound.	A tiger is walking around.
 A person is slicing onions.	A person is peeling an onion.
 A man is playing the piano.	A man is playing the trumpet.
 A woman is peeling a potato.	A woman is peeling an apple.
-A pankda is eating bamboo.	A panda bear is eating some bamboo.
+A panda is eating bamboo.	A panda bear is eating some bamboo.
 A person is peeling an onion.	A person is peeling an eggplant.
 A monkey pushes another monkey.	The monkey pushed the other monkey.
 A squirrel runs around in circles.	A squirrel is moving in circles.
@@ -118,7 +118,7 @@ A man is tying his shoe.	A man ties his shoe.
 A boy is singing and playing the piano.	A boy is playing the piano.
 A dog is eating water melon.	A dog is eating a piece of watermelon.
 A woman is chopping broccoli.	A woman is chopping broccoli with a knife.
-A man is peeling a potato.	A man peeled a potatoe.
+A man is peeling a potato.	A man peeled a potato.
 A woman is playing a guitar.	A man plays a guitar.
 A man is playing a flute.	A man is playing guitar.
 A woman is slicing tomato.	A man is slicing onion.
@@ -143,7 +143,7 @@ A man is riding on a horse.	A girl is riding a horse.
 A man is riding a bicycle.	A monkey is riding a bike.
 A man is slicing potatoes.	A woman is peeling potato.
 A woman is peeling a potato.	A man is slicing potato.
-A man is playing a guitar.	Someoen is playing guitar.
+A man is playing a guitar.	Someone is playing guitar.
 A woman is cutting tofu.	A woman is cutting an onion.
 A girl is riding a horse.	A girl is riding a bicycle.
 A woman is slicing a leek.	A woman is slicing ginger.
@@ -156,7 +156,7 @@ A woman is slicing up some meat.	A woman is breading some meat.
 A man is playing on his keyboard.	A man is playing a keyboard piano.
 Two zebras play in an open field.	Two zebras are playing in a field.
 The lady chopped up the green onions.	The lady cut up a green onion.
-Someone is sitring noodles in water.	A woman is boiling noodles in water.
+Someone is sitting noodles in water.	A woman is boiling noodles in water.
 An animal is biting a persons finger.	A slow loris is biting a persons finger.
 Lionel Richie is dancing on the ceiling.	Lionel Ritchie dances while standing on the ceiling.
 A man is playing a piano.	A person is playing the piano.
@@ -198,7 +198,7 @@ The shirtless man sat in a chair.	A shirtless man is sitting on a chair.
 A turtle is swimming in water.	A turtle is walking underwater.
 Two women are wrestling.	Two women are wrestling on the floor.
 The puppy played with a blue tennis ball.	A puppy is playing with a tennis ball.
-A kangroo is eating something.	A kangaroo is eating.
+A kangaroo is eating something.	A kangaroo is eating.
 A cat is playing a piano.	A man is playing a guitar.
 The man cut some carpet with a knife.	A man is cutting carpet with a knife.
 A woman is riding a motorized scooter down a road.	A man is riding a motor scooter.
@@ -208,7 +208,7 @@ A man is playing a guitar.	A man plays the guitar.
 A dog licks up a baby's drool.	A dog licks a baby.
 A man is rowing a boat.	A man is slicing a tomato.
 A young woman is putting stickers all over her face.	A woman is applying stickers to her face.
-A man cuts up potatos.	A man slices potatoes.
+A man cuts up potatoes.	A man slices potatoes.
 A man sitting on the floor plays a guitar.	A man sitting on the floor in a room is strumming a guitar.
 A woman is chopping up garlic.	The woman is dicing garlic.
 A puppy plays with a plastic container.	The dog is playing with a plastic container.
@@ -224,7 +224,7 @@ A man is playing a basketball.	A man is playing a piano.
 A man is cutting a fish.	A man guts a fish.
 Two men are packing suitcases into the trunk of a car.	The men are putting suitcases into the car's trunk.
 A toddler walks down a hallway.	A little girl is walking down a hallway.
-A man pours oil on some tomatos.	The man poured oil on the cut tomatoes.
+A man pours oil on some tomatoes.	The man poured oil on the cut tomatoes.
 A man is slicing something.	A man is slicing a bun.
 A plane is landing.	A animated airplane is landing.
 A woman is wrapping tofu.	A woman is balling dough.
@@ -288,13 +288,13 @@ A man is drilling a hole in a board.	Someone is drilling a hole in a piece of wo
 A cat is playing keyboards.	A cat is playing a piano.
 Two dogs swim in a pool.	Dogs are swimming in a pool.
 A man is fitting silencer on a pistol.	A man is adding a silencer to a gun.
-The man used a chopper to chop the onion.	The man used a machine to chop up a potatoe.
+The man used a chopper to chop the onion.	The man used a machine to chop up a potato.
 A woman slices tofu.	A woman is cutting tofu.
 A herd of deer are crossing the street.	A herd of caribou are crossing a road.
 The person is riding the horse.	A man is riding a horse.
 Someone is feeding a animal.	Someone is playing a piano.
-Someone is slicing tortila's.	Someone is riding a horse.
-Someone is mixing ingrediants.	Someone is sewing things.
+Someone is slicing tortilas.	Someone is riding a horse.
+Someone is mixing ingredients.	Someone is sewing things.
 A rooster pecks at a dead mouse.	A chicken is pecking at a dead mouse.
 A woman holds a kangaroo.	A woman is picking up a kangaroo.
 A man is playing with frogs	A cat is playing with a camera.
@@ -321,7 +321,7 @@ A boy is playing a key-board.	A boy is playing the piano.
 A person plays a keyboard.	Someone is playing a keyboard.
 A boy studies a calendar.	A boy is looking at a calendar.
 A man is shooting a gun.	A man is spitting.
-Someone is slicing an onion.	Someoen is peeling a potato.
+Someone is slicing an onion.	Someone is peeling a potato.
 A man is talking on a phone.	A man is singing to a woman.
 A man is swimming.	A woman is slicing meat.
 The ballerina is dancing.	A man is dancing.
@@ -332,7 +332,7 @@ A woman is dancing.	A woman is playing violin.
 A woman is cracking eggs into a bowl.	A woman is placing skewers onto a rack.
 A car is moving through a road.	A car is driving down the road.
 A woman is slicing some tomatoes.	A woman is chopping a potato.
-Someone is greasing a pan.	Smeone is laying down.
+Someone is greasing a pan.	Someone is laying down.
 A man is playing guitar.	A man is draining pasta.
 A woman is drinking vodka.	A woman is exercising.
 A woman is water skiing.	A woman is slicing fish.
@@ -362,7 +362,7 @@ A woman is playing a game with a man.	A man is playing piano.
 The man is driving a white car.	A man is giving an interview.
 A young man is playing the piano.	A woman is peeling a prawn.
 A car is driven down the road.	A girl is walking down a road.
-A woman is mixing ingrediants.	A woman is mixing food in a bowl.
+A woman is mixing ingredients.	A woman is mixing food in a bowl.
 A man drove his car.	A man is driving a car.
 A car backs out of a space.	A car is backing out of a blocked lane.
 Someone is shredding cabbage leaves with a knife.	Someone is chopping some cabbage leaves.
@@ -392,7 +392,7 @@ A woman is deveining shrimp.	A man is dancing in rain.
 A man is riding a horse.	A woman is washing a freezer.
 A man plays a keyboard.	A person is playing the keyboard.
 A man walks down a path.	A man walks across a tight rope.
-A man is slicing a potato.	A woman is cutting a jalepeno.
+A man is slicing a potato.	A woman is cutting a jalapeno.
 A dog is barking at a ball.	A dog swims after a tennis ball.
 A woman is playing in the ocean.	A woman is preparing shrimp to cook.
 A kid runs away from a fish swinging around on a fishing pole.	A little kid is running around a fishing pole.
@@ -422,7 +422,7 @@ A man plays the guitar.	The man sang and played his guitar.
 A man is sitting and smoking.	A man is smoking a cigarette.
 A chimpanzee is hurting a woman.	A man is driving a car.
 The woman is peeling shrimp.	The man is holding a lemur.
-A guy is playing hackysack	A man is playing a key-board.
+A guy is playing hackysack.	A man is playing a key-board.
 A man is playing a guitar.	A woman is riding a horse.
 One man is breaking cement on another man's chest.	A man breaks cinder blocks on another man.
 Two zebras are playing.	Zebras are socializing.
@@ -506,7 +506,7 @@ A person is chopping coriander leaves.	A woman is slicing up some green leaves.
 People ride and paddle a raft.	Four people are floating on a raft.
 A man is pressing microwave buttons.	A man turns on the microwave.
 A girl is riding a horse.	The girl trotted the horse.
-The lady cut up a potatoe.	A man is cutting a potato.
+The lady cut up a potato.	A man is cutting a potato.
 A monkey is playing drums.	A gorilla plays the drums.
 The missile exploded.	A rocket exploded.
 A dog is playing in the snow.	A dog is pawing at a fly in the carpet before it.
@@ -587,7 +587,7 @@ A woman is lying on a blanket on a rock and reading a book.	A woman seated is si
 Two puppies are playing with each other.	Some men are playing soccer.
 A man is running on a field.	A man climbs up a rope.
 A man is hugging someone.	A man is taking a picture.
-Someone is pouring ingrediants into a pot.	A man puts vegetables into a pot.
+Someone is pouring ingredients into a pot.	A man puts vegetables into a pot.
 A man is seasoning some carrots.	A woman is slicing garlic.
 A couple are walking.	Some men are sawing.
 Two men pushed carts through the woods.	Two men are pushing carts.
@@ -600,7 +600,7 @@ A man is shaking a container over a kitchen sink.	A man is emptying a plastic co
 A man is playing a football.	A man is maneuvering a soccer ball with his feet.
 A man is walking with a horse.	A man is leading a horse around by it's halter.
 Paper is being cut with scissors.	A piece of paper is being cut.
-The lady peeled the potatoe.	A woman is peeling a potato.
+The lady peeled the potato.	A woman is peeling a potato.
 A person peels shrimp.	The lady peeled the shrimp.
 A man is playing a guitar.	A man tries to read the paper.
 A man making a bed in a hotel.	A man is holding a animal.
@@ -697,7 +697,7 @@ A boy takes off his sunglasses.	A boy is screaming.
 A girl is playing a piano.	A boy is doing push ups.
 The lady stirred up raw eggs in the bowl.	A woman is pouring eyes into a bowl.
 A cheetah is running behind its prey.	A cheetah chases prey on across a field.
-The lady sliced a tomatoe.	Someone is cutting a tomato.
+The lady sliced a tomato.	Someone is cutting a tomato.
 Someone is holding a hedgehog.	A onion is being sliced.
 A woman peels a potato.	A woman is grilling pineapples.
 A cat is playing on the floor.	A man is slicing garlic.
