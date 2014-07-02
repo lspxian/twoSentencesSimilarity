@@ -297,7 +297,7 @@ Someone is slicing tortilas.	Someone is riding a horse.
 Someone is mixing ingredients.	Someone is sewing things.
 A rooster pecks at a dead mouse.	A chicken is pecking at a dead mouse.
 A woman holds a kangaroo.	A woman is picking up a kangaroo.
-A man is playing with frogs	A cat is playing with a camera.
+A man is playing with frogs.	A cat is playing with a camera.
 Two men are talking.	Two men are playing guitar.
 Two little girls are talking on the phone.	A little girl is walking down the street.
 A man is cutting apple by his hand.	A man is cutting carpet with a knife.
