@@ -24,8 +24,8 @@ public class MainClass {
 		
 		//read file
 		try {
-			BufferedReader br = new BufferedReader(new FileReader("data/STS.input.MSRvid.txt"));
-			//BufferedReader br = new BufferedReader(new FileReader("data/testFile.txt"));
+			//BufferedReader br = new BufferedReader(new FileReader("data/STS.input.MSRvid.txt"));
+			BufferedReader br = new BufferedReader(new FileReader("data/testFile.txt"));
 		
 			String line = br.readLine();
 			while(line != null){
@@ -42,7 +42,7 @@ public class MainClass {
 		
 		//compute
 		for(int i=0;i<sentences1.size();i++){
-			if(sentences1.get(i).length()<sentences2.get(i).length()){
+			if(sentences1.get(i).split(" ").length<sentences2.get(i).split(" ").length){
 				values.add(ss.twoSS(sentences2.get(i), sentences1.get(i)));				
 			}else{
 				values.add(ss.twoSS(sentences1.get(i), sentences2.get(i)));
