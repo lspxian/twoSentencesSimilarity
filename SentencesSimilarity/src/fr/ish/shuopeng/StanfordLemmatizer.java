@@ -114,6 +114,8 @@ public class StanfordLemmatizer {
 
 
     public static void main(String[] args) {
+    	//par default m>n
+    	
         //System.out.println("Starting Stanford Lemmatizer");
        // String text = "A plane is taking off.	An air plane is taking off.";
         //String text = "Once you write the code, Eclipse will tell you to import the MaxentTagger and inform you that it throws some exceptions.	Foxes are eating from a plate.";
@@ -121,7 +123,7 @@ public class StanfordLemmatizer {
         //System.out.println(slem.lemmatize(text));
         
        // List<Matrix> test = slem.similarityMatrix(text);
-        Matrix test = slem.sentenceSimMatrix("A woman is eating something.", "A woman is eating meat.");
+        Matrix test = slem.sentenceSimMatrix("A woman picks up and holds a baby kangaroo in her arms.", "A woman picks up and holds a baby kangaroo.");
         System.out.println(test);
     }
 

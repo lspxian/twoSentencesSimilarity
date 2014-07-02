@@ -99,15 +99,17 @@ public class SentenceSim {
 	}
 	
 	public static void main(String[] args){
+		//par default m>n
+		
 		LexicalizedParser lp = LexicalizedParser.loadModel("edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz");;
 		StanfordLemmatizer slem = new StanfordLemmatizer();
 		
 		SentenceSim ss = new SentenceSim(lp,slem);
 		
-		System.out.println("sim value : "+ss.twoSS("John hits the ball.", "Mike eats the ball."));
-		//System.out.println("sim value : "+ss.twoSS("A woman is eating meat.", "A woman is eating meat."));
+		System.out.println("sim value : "+ss.twoSS("A woman picks up and holds a baby kangaroo in her arms.", "A woman picks up and holds a baby kangaroo."));
+		//System.out.println("sim value : "+ss.twoSS("A plane is taking off.", "An air plane is taking off."));
 		//System.out.println("sim value : "+ss.twoSS("A man seated is playing the cello.",	"A man seated is playing the cello."));
-		//System.out.println(twoSS("A woman driving a car is talking to the man seated beside her.",	"A woman driving a car is talking to the man seated beside her."));
+		//System.out.println(ss.twoSS("A woman is talking to the man seated beside her.",	"A woman driving a car is talking to the man seated beside her."));
 		
 	}
 }
