@@ -24,13 +24,13 @@ public class MainClass {
 		
 		//read file
 		try {
-			//BufferedReader br = new BufferedReader(new FileReader("data/STS.input.MSRvid.txt"));
-			BufferedReader br = new BufferedReader(new FileReader("data/testFile.txt"));
+			BufferedReader br = new BufferedReader(new FileReader("data/STS.input.MSRvid.txt"));
+			//BufferedReader br = new BufferedReader(new FileReader("data/testFile.txt"));
 		
 			String line = br.readLine();
 			while(line != null){
 				sentences1.add(line.substring(0, line.indexOf(".")+1));
-				sentences2.add(line.substring(line.indexOf(".")+2));
+				sentences2.add(line.substring(line.indexOf(".")+1));
 				line = br.readLine();
 			}
 			
@@ -42,7 +42,11 @@ public class MainClass {
 		
 		//compute
 		for(int i=0;i<sentences1.size();i++){
-			values.add(ss.twoSS(sentences1.get(i), sentences2.get(i)));
+			if(sentences1.get(i).length()<sentences2.get(i).length()){
+				values.add(ss.twoSS(sentences2.get(i), sentences1.get(i)));				
+			}else{
+				values.add(ss.twoSS(sentences1.get(i), sentences2.get(i)));
+			}
 		}
 		
 		//write file
