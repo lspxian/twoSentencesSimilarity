@@ -57,7 +57,7 @@ public class StanfordLemmatizer {
             for (CoreLabel token: sentence.get(TokensAnnotation.class)) {
                 // Retrieve and add the lemma for each word into the
                 // list of lemmas
-            	if(!(token.get(LemmaAnnotation.class).equals(",")||token.get(LemmaAnnotation.class).equals("."))){
+            	if(!(token.get(LemmaAnnotation.class).equals("."))){
             		lemmas.add(token.get(LemmaAnnotation.class));
             	}
             }
@@ -74,7 +74,7 @@ public class StanfordLemmatizer {
         List<CoreMap> sentences = document.get(SentencesAnnotation.class);
         for(CoreMap sentence: sentences) {
             for (CoreLabel token: sentence.get(TokensAnnotation.class)) {
-               if(!(token.get(PartOfSpeechAnnotation.class).equals(",")||token.get(PartOfSpeechAnnotation.class).equals("."))){
+               if(!(token.get(PartOfSpeechAnnotation.class).equals("."))){
             	   pos.add(token.get(PartOfSpeechAnnotation.class));            	   
                }
             }

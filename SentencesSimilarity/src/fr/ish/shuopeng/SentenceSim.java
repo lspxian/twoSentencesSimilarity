@@ -30,7 +30,7 @@ public class SentenceSim {
 		this.slem = slem;
 	}
 	
-	public Matrix setSentenceMatrix(String str,LexicalizedParser lp){
+	public Matrix setSentenceMatrix(String str,int n, LexicalizedParser lp){
 		
 		
 	    TokenizerFactory<CoreLabel> tokenizerFactory =
@@ -45,10 +45,10 @@ public class SentenceSim {
 	    GrammaticalStructure gs = gsf.newGrammaticalStructure(parse);
 	    List<TypedDependency> tdl = gs.typedDependencies(false);
 	    	    
-	    int n = tdl.size();
+	    //int n = tdl.size();
 		double[][] ma = new double[n][n];
 		
-		for(int i=0;i<n;i++){
+		for(int i=0;i<tdl.size();i++){
 			//gov->dep
 			 TypedDependency td = tdl.get(i);
 			 TreeGraphNode gov = td.gov();
@@ -73,12 +73,13 @@ public class SentenceSim {
 	
 		public double twoSS(String sen1, String sen2){
 		
-		Matrix matrix1 = setSentenceMatrix(sen1,this.lp);
-		Matrix matrix2 = setSentenceMatrix(sen2,this.lp);
-		int m = matrix1.getRowDimension();
-		int n = matrix2.getRowDimension();
-		
 		Matrix senSim = this.slem.sentenceSimMatrix(sen1, sen2);
+		int m = senSim.getRowDimension();
+		int n = senSim.getColumnDimension();
+		
+		Matrix matrix1 = setSentenceMatrix(sen1,m,this.lp);
+		Matrix matrix2 = setSentenceMatrix(sen2,n,this.lp);
+		
 		
 		//A*X*t(B) + t(A)*X*B
 		Matrix simMatRes = matrix1.times(senSim).times(matrix2.transpose()).plus(matrix1.transpose().times(senSim).times(matrix2));
@@ -118,7 +119,7 @@ public class SentenceSim {
 		
 		SentenceSim ss = new SentenceSim(lp,slem);
 		
-		System.out.println("sim value : "+ss.twoSS("A woman picks up and holds a baby kangaroo in her arms.", "A woman picks up and holds a baby kangaroo."));
+		System.out.println("sim value : "+ss.twoSS("A boy sits on a bed, sings and plays a guitar.", "A boy sits on a bed, sings and plays a guitar."));
 		//System.out.println("sim value : "+ss.twoSS("A plane is taking off.", "An air plane is taking off."));
 		//System.out.println("sim value : "+ss.twoSS("A man seated is playing the cello.",	"A man seated is playing the cello."));
 		//System.out.println(ss.twoSS("A woman is talking to the man seated beside her.",	"A woman driving a car is talking to the man seated beside her."));

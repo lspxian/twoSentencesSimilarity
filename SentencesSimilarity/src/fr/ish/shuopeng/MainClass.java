@@ -35,7 +35,6 @@ public class MainClass {
 			
 			br.close();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
@@ -45,6 +44,7 @@ public class MainClass {
 			BufferedWriter bw = new BufferedWriter(new FileWriter(new File("data/myOutput.txt")));
 			
 			for(int i=0;i<sentences1.size();i++){
+				//TODO
 				if(sentences1.get(i).split(" ").length<sentences2.get(i).split(" ").length){
 					bw.write(ss.twoSS(sentences2.get(i), sentences1.get(i))+"\n");			
 				}else{
@@ -55,7 +55,6 @@ public class MainClass {
 			bw.close();
 			System.out.println("finished!");
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		
