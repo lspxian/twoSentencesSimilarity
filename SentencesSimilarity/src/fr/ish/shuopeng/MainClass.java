@@ -20,7 +20,6 @@ public class MainClass {
 		
 		List<String> sentences1 = new ArrayList<String>();
 		List<String> sentences2 = new ArrayList<String>();
-		List<Double> values = new ArrayList<Double>();
 		
 		//read file
 		try {
@@ -40,22 +39,17 @@ public class MainClass {
 			e.printStackTrace();
 		}
 		
-		//compute
-		for(int i=0;i<sentences1.size();i++){
-			if(sentences1.get(i).split(" ").length<sentences2.get(i).split(" ").length){
-				values.add(ss.twoSS(sentences2.get(i), sentences1.get(i)));				
-			}else{
-				values.add(ss.twoSS(sentences1.get(i), sentences2.get(i)));
-			}
-		}
-		
 		//write file
 		try {
 			
 			BufferedWriter bw = new BufferedWriter(new FileWriter(new File("data/myOutput.txt")));
 			
-			for(Double dl:values){
-				bw.write(dl.toString()+"\n");
+			for(int i=0;i<sentences1.size();i++){
+				if(sentences1.get(i).split(" ").length<sentences2.get(i).split(" ").length){
+					bw.write(ss.twoSS(sentences2.get(i), sentences1.get(i))+"\n");			
+				}else{
+					bw.write(ss.twoSS(sentences1.get(i), sentences2.get(i))+"\n");	
+				}
 			}
 			
 			bw.close();
