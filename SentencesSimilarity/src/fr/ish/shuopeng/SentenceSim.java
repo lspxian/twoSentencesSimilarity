@@ -50,10 +50,22 @@ public class SentenceSim {
 		
 		for(int i=0;i<n;i++){
 			//gov->dep
-			 TreeGraphNode gov = tdl.get(i).gov();
-			 TreeGraphNode dep = tdl.get(i).dep();
+			 TypedDependency td = tdl.get(i);
+			 TreeGraphNode gov = td.gov();
+			 TreeGraphNode dep = td.dep();
+			 String gsn = td.reln().getShortName();
 			 if(gov.index()!=0){
-				 ma[gov.label().index()-1][dep.label().index()-1] = 1;				 
+				 // -1 eliminer le root
+				 /*
+				 if(gsn=="det"){
+					 ma[gov.label().index()-1][dep.label().index()-1] = 0.1;
+				 }else if(gsn=="aux"){
+					 ma[gov.label().index()-1][dep.label().index()-1] = 0.3;
+				 }else{
+					 ma[gov.label().index()-1][dep.label().index()-1] = 1;				 
+				 }*/
+				 ma[gov.label().index()-1][dep.label().index()-1] = 1;
+				 
 			 }
 		}
 		return new Matrix(ma);

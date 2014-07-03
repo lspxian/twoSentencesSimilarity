@@ -57,8 +57,9 @@ public class StanfordLemmatizer {
             for (CoreLabel token: sentence.get(TokensAnnotation.class)) {
                 // Retrieve and add the lemma for each word into the
                 // list of lemmas
-                lemmas.add(token.get(LemmaAnnotation.class));
-               // lemmas.add(token.get(PartOfSpeechAnnotation.class));
+            	if(!(token.get(LemmaAnnotation.class).equals(",")||token.get(LemmaAnnotation.class).equals("."))){
+            		lemmas.add(token.get(LemmaAnnotation.class));
+            	}
             }
         }
         return lemmas;
@@ -73,7 +74,9 @@ public class StanfordLemmatizer {
         List<CoreMap> sentences = document.get(SentencesAnnotation.class);
         for(CoreMap sentence: sentences) {
             for (CoreLabel token: sentence.get(TokensAnnotation.class)) {
-               pos.add(token.get(PartOfSpeechAnnotation.class));
+               if(!(token.get(PartOfSpeechAnnotation.class).equals(",")||token.get(PartOfSpeechAnnotation.class).equals("."))){
+            	   pos.add(token.get(PartOfSpeechAnnotation.class));            	   
+               }
             }
         }
         return pos;
@@ -87,10 +90,10 @@ public class StanfordLemmatizer {
     	List<String> pos1 = this.partOfSpeech(s1);
     	List<String> pos2 = this.partOfSpeech(s2);
     	
-    	double[][] simmat = new double[lemma1.size()-1][lemma2.size()-1];
+    	double[][] simmat = new double[lemma1.size()][lemma2.size()];
     	
-    	for(int i=0;i<lemma1.size()-1;i++){
-    		for(int j=0;j<lemma2.size()-1;j++){
+    	for(int i=0;i<lemma1.size();i++){
+    		for(int j=0;j<lemma2.size();j++){
    			
     			if(pos1.get(i).startsWith(".")&&pos2.get(j).startsWith(".")){}
     			else if(lemma1.get(i).equals(lemma2.get(j))){
@@ -123,7 +126,7 @@ public class StanfordLemmatizer {
         //System.out.println(slem.lemmatize(text));
         
        // List<Matrix> test = slem.similarityMatrix(text);
-        Matrix test = slem.sentenceSimMatrix("A woman picks up and holds a baby kangaroo in her arms.", "A woman picks up and holds a baby kangaroo.");
+        Matrix test = slem.sentenceSimMatrix("A boy sits on a bed, sings and plays a guitar", "A boy sits on a bed, sings and plays a guitar");
         System.out.println(test);
     }
 
