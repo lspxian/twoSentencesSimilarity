@@ -1,4 +1,5 @@
-A man with a hard hat is dancing.	A man wearing a hard hat is dancing.
-A plane is taking off.	An air plane is taking off.
-A young child is riding a horse.	A child is riding a horse.
-A man is feeding a mouse to a snake.	The man is feeding a mouse to the snake.
+A man is playing a flute.	A man is playing a piano.
+A man is speaking.	A man is cooking.
+A man is spinning.	A man is dancing.
+A little boy is singing and playing a guitar.	A man is singing and playing the guitar.
+A monkey is swinging from limb to limb.	A monkey is swinging from tree to tree.

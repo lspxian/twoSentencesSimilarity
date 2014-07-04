@@ -458,7 +458,7 @@ A man is looking at a computer monitor.	A man is using a laptop.
 The boy is riding a tricycle.	A woman is riding a water scooter.
 Two men compete in a tire rolling race.	Two people flipped tractor tires in a race.
 A woman opens a window.	A man is crawling.
-A person is cutting a meat.	A person riding a mechanical bull
+A person is cutting a meat.	A person riding a mechanical bull.
 A man is playing a violin.	A woman is using a sewing machine.
 Five kittens are eating out of five dishes.	Kittens are eating food on trays.
 People are dancing outside.	A group of people are dancing.
@@ -714,7 +714,7 @@ A man is looking out of a window.	A woman is swimming in the water.
 A man seated is playing the guitar.	A man is playing an acoustic guitar and singing into a microphone.
 A dog is barking at a toy.	The little dog barked at the electronic toy.
 A woman is slicing an onion with a knife.	A man is preparing some dish.
-A man jumping rope	A man is talking.
+A man is jumping rope.	A man is talking.
 A woman is peeling an orange.	A woman cuts off a small piece of lemon rind.
 A rider is running and jumping her horse.	A woman jumps hurdles on a horse.
 A boy is playing a key-board.	A boy is sitting in a room playing a piano by lamp light.
