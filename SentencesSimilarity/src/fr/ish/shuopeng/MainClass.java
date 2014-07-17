@@ -29,7 +29,7 @@ public class MainClass {
 			String line = br.readLine();
 			while(line != null){
 				sentences1.add(line.substring(0, line.indexOf(".")+1));
-				sentences2.add(line.substring(line.indexOf(".")+1));
+				sentences2.add(line.substring(line.indexOf(".")+2));
 				line = br.readLine();
 			}
 			
@@ -46,9 +46,23 @@ public class MainClass {
 			for(int i=0;i<sentences1.size();i++){
 				//TODO
 				if(sentences1.get(i).split(" ").length<sentences2.get(i).split(" ").length){
-					bw.write(ss.twoSS(sentences2.get(i), sentences1.get(i))+"\n");			
+					double p1 = ss.twoSS(sentences2.get(i), sentences1.get(i));
+					double p2 = ss.twoSS(sentences1.get(i), sentences1.get(i));
+					double p3 = ss.twoSS(sentences2.get(i), sentences2.get(i));
+					System.out.println(p1*p1/p2/p3);
+					System.out.println();
+					bw.write(p1*2/(p2+p3)+"\n");
+					//bw.write(p1*p1/p2/p3+"\n");			
+					//bw.write(ss.twoSS(sentences2.get(i), sentences1.get(i))+"\n");			
 				}else{
-					bw.write(ss.twoSS(sentences1.get(i), sentences2.get(i))+"\n");	
+					double p1 = ss.twoSS(sentences1.get(i), sentences2.get(i));
+					double p2 = ss.twoSS(sentences1.get(i), sentences1.get(i));
+					double p3 = ss.twoSS(sentences2.get(i), sentences2.get(i));
+					System.out.println(p1*p1/p2/p3);
+					System.out.println();
+					bw.write(p1*2/(p2+p3)+"\n");
+					//bw.write(p1*p1/p2/p3+"\n");
+					//bw.write(ss.twoSS(sentences1.get(i), sentences2.get(i))+"\n");	
 				}
 			}
 			

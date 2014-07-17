@@ -32,16 +32,16 @@ public class WordSimilarity {
 	
 	public double getSimilarity(String w1, String w2, String pos1, String pos2){
 		
-		//just for non et verb
+		//just for noun and verb
 		//if(pos1.startsWith("NN))
 		//TODO
-		 //String url = "http://maraca.d.umn.edu/cgi-bin/similarity/similarity.cgi?word1=keep%23v&senses1=all&word2=use%23v&senses2=all&measure=wup&rootnode=yes";
+		 //String url = "http://maraca.d.umn.edu/cgi-bin/similarity/similarity.cgi?word1=keep%23v&senses1=all&word2=use%23v&senses2=all&measure=path&rootnode=yes";
 		 String url = "http://maraca.d.umn.edu/cgi-bin/similarity/similarity.cgi?word1="
-		 +w1+"%23"+pos1+"&senses1=all&word2="+w2+"%23"+pos2+"&senses2=all&measure=wup&rootnode=yes";
+		 +w1+"%23"+pos1+"&senses1=all&word2="+w2+"%23"+pos2+"&senses2=all&measure=lin&rootnode=yes";
 		// System.out.println(url);
 	     String result = getHTML(url);
 	     
-	     Pattern pattern = Pattern.compile("using wup is (\\d+\\.\\d+)");
+	     Pattern pattern = Pattern.compile("using lin is (\\d+\\.\\d+)");
 	     Matcher matcher = pattern.matcher(result);
 	     
 	     while(matcher.find()){
