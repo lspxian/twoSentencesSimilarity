@@ -59,11 +59,11 @@ public class SentenceSim {
 				 
 				 if(gsn.equals("det")||gsn.equals("cc")){
 					 ma[gov.label().index()-1][dep.label().index()-1] = 0.1;
-				 }else if(gsn.equals("aux")||gsn.equals("prep")){
+				 }else if(gsn.equals("aux")||gsn.equals("auxpass")||gsn.equals("prep")||gsn.equals("pcomp")||gsn.equals("pobj")){
 					 ma[gov.label().index()-1][dep.label().index()-1] = 0.3;
-				 }else if(gsn.equals("nsubj")){
-					 ma[dep.label().index()-1][gov.label().index()-1] = 2;				 
-				 }else if(gsn.equals("dobj")||gsn.equals("pobj")||gsn.equals("conj")){
+				 }else if(gsn.equals("nsubj")||gsn.equals("nsubjpass")){
+					 ma[gov.label().index()-1][dep.label().index()-1] = 2;			 
+				 }else if(gsn.equals("dobj")||gsn.equals("conj")){
 					 ma[gov.label().index()-1][dep.label().index()-1] = 2;				 
 				 }else {
 					 ma[gov.label().index()-1][dep.label().index()-1] = 1;				 
@@ -76,77 +76,99 @@ public class SentenceSim {
 	}
 	
 		public double twoSS(String sen1, String sen2){
+			
+			System.out.println("similarity : "+ sen1+" & " + sen2);
 		
 		Matrix simMatRes = this.slem.sentenceSimMatrix(sen1, sen2);
 		int m = simMatRes.getRowDimension();
 		int n = simMatRes.getColumnDimension();
 		
+		//System.out.println("Matrice de similarité des mots( normé X)");
+		//simMatRes.print(n, 3);
+		
 		Matrix matrix1 = setSentenceMatrix(sen1,m,this.lp);
+		
+		//System.out.println("Matrice d'adjacence pour '"+sen1+"' (normé A)");
+		//matrix1.print(m, 3);
+		
 		Matrix matrix2 = setSentenceMatrix(sen2,n,this.lp);
+		
+		//System.out.println("Matrice d'adjacence pour '"+sen2+"' (normé B)");
+		//matrix2.print(n, 3);
 		
 		for(int j=0;j<1;j++){
 		//A*X*t(B) + t(A)*X*B
 		simMatRes = matrix1.times(simMatRes).times(matrix2.transpose()).plus(matrix1.transpose().times(simMatRes).times(matrix2));
-		//simMatRes.print(m, n);
+		
+		//System.out.println("calcul S=A*X*t(B) + t(A)*X*B, resultat normé S");
+		//simMatRes.print(m, 3);
+		
+		//normaliser
 		//double normf = simMatRes.normF(); 
 		//System.out.println(normf);
 		//simMatRes.arrayRightDivideEquals(new Matrix(m,n,normf)) ;
-		//simMatRes.print(m, n);
 		}
 		
 		SingularValueDecomposition svd = new SingularValueDecomposition(simMatRes);
 		Matrix resultMat = svd.getS();
 		
-		//resultMat.print(arg0, arg1);
+		//System.out.println("Matrice diagonale SVD");
+		//resultMat.print(resultMat.getColumnDimension(), 4);
 		
-		//double sum = 0;
+		double sum = 0;
 		
 		double produit = resultMat.get(0, 0);
 		int i=1;
-		while(resultMat.get(i-1, i-1)/resultMat.get(i, i)<4){
+		
+		while(i<n&&resultMat.get(i-1, i-1)/resultMat.get(i, i)<4){
 			produit *= resultMat.get(i,i);
 			i++;
 		}
 		
 		for(i=0;i<resultMat.getRowDimension();i++){
 		//TODO	
-			//sum += resultMat.get(i,i);
+			sum += resultMat.get(i,i);
 			System.out.print(resultMat.get(i,i));
 			System.out.print(" ");
 			/*
 			if(resultMat.get(i,i)>0.1)
 				produit *= resultMat.get(i,i);*/
 		}
+		System.out.println();
 		
-		System.out.print("\n");
-		System.out.println("similarity : "+ sen1+" & " + sen2);
-		//System.out.println("sum : "+sum);
+		System.out.println("norm2 : "+svd.norm2());
+		System.out.println("sum : "+sum);
 		System.out.println("produit : "+produit);
 		//System.out.println("sim value : "+sum*25/n);		
 		//System.out.println("produit : "+produit);
-		return produit;
-		
-		
+		//System.out.println("sum/(m+n-2) valeur : "+sum/(m+n-2));
+		System.out.println();
+		return sum;
+		//return produit;
 		//return 0;
-		
 	}
 	
 	public static void main(String[] args){
 		//par default m>n
 		
-		LexicalizedParser lp = LexicalizedParser.loadModel("edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz");;
+		LexicalizedParser lp = LexicalizedParser.loadModel("edu/stanford/nlp/models/lexparser/englishPCFG.ser.gz");
 		StanfordLemmatizer slem = new StanfordLemmatizer();
 		
 		SentenceSim ss = new SentenceSim(lp,slem);
+
+		//System.out.println("sim value : "+ss.twoSS("Two Sumo ringers are fighting each other.","A man rides a water toy in the water."));
 		/*
-		System.out.println("sim value : "+ss.twoSS("A small guinea pig is gnawing and eating a piece of carrot on the floor.", "A small guinea pig is gnawing and eating a piece of carrot on the floor."));
-		System.out.println();
-		System.out.println("sim value : "+ss.twoSS("A Guinea pig eats a carrot.", "A Guinea pig eats a carrot."));
-		System.out.println();
-		System.out.println("sim value : "+ss.twoSS("A small guinea pig is gnawing and eating a piece of carrot on the floor.", "A Guinea pig eats a carrot."));
+		ss.twoSS("Three men are playing chess.","Two men are playing chess.");
+		ss.twoSS("Three men are playing chess.","Three men are playing chess.");
+		ss.twoSS("Two men are playing chess.","Two men are playing chess.");
 		*/
-		System.out.println("sim value : "+ss.twoSS("man and dog are walking together.",	"The deer jumped over the fence."));
-		//System.out.println(ss.twoSS("A woman is talking to the man seated beside her.",	"A woman driving a car is talking to the man seated beside her."));
+		String s1 = "The dog eats the meal.";
+		String s2 = "The cat eats the meal.";
+		double p1 = ss.twoSS(s1, s2);
+		double p2 = ss.twoSS(s1, s1);
+		double p3 = ss.twoSS(s2, s2);
+		//System.out.println("p1*p1/p2/p3 : "+p1*p1/p2/p3);
+		
 		
 	}
 }

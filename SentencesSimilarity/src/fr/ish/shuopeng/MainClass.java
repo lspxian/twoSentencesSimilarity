@@ -41,7 +41,7 @@ public class MainClass {
 		//write file
 		try {
 			
-			BufferedWriter bw = new BufferedWriter(new FileWriter(new File("data/myOutput.txt")));
+			BufferedWriter bw = new BufferedWriter(new FileWriter(new File("data/myOutputC.txt")));
 			
 			for(int i=0;i<sentences1.size();i++){
 				//TODO
@@ -51,8 +51,8 @@ public class MainClass {
 					double p3 = ss.twoSS(sentences2.get(i), sentences2.get(i));
 					System.out.println(p1*p1/p2/p3);
 					System.out.println();
-					bw.write(p1*2/(p2+p3)+"\n");
-					//bw.write(p1*p1/p2/p3+"\n");			
+					//bw.write(p1*2/(p2+p3)+"\n");
+					bw.write(p1*p1/p2/p3+"\n");			
 					//bw.write(ss.twoSS(sentences2.get(i), sentences1.get(i))+"\n");			
 				}else{
 					double p1 = ss.twoSS(sentences1.get(i), sentences2.get(i));
@@ -60,8 +60,8 @@ public class MainClass {
 					double p3 = ss.twoSS(sentences2.get(i), sentences2.get(i));
 					System.out.println(p1*p1/p2/p3);
 					System.out.println();
-					bw.write(p1*2/(p2+p3)+"\n");
-					//bw.write(p1*p1/p2/p3+"\n");
+					//bw.write(p1*2/(p2+p3)+"\n");
+					bw.write(p1*p1/p2/p3+"\n");
 					//bw.write(ss.twoSS(sentences1.get(i), sentences2.get(i))+"\n");	
 				}
 			}
